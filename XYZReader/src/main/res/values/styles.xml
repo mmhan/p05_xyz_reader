@@ -15,7 +15,7 @@
      limitations under the License.
 -->
 
-<resources>
+<resources xmlns:tools="http://schemas.android.com/tools">
 
     <style name="Theme.XYZReader" parent="@style/Theme.AppCompat.Light.NoActionBar">
 
@@ -25,7 +25,11 @@
         <item name="android:textColorSecondaryInverse">@color/secondary_text_material_dark</item>
     </style>
 
-    <style name="Theme.XYZReader.Detail">
+    <style name="Theme.XYZReader.Detail" parent="Theme.AppCompat.Light.NoActionBar">
+        <item name="windowActionBar">false</item>
+        <item name="windowNoTitle">true</item>
+        <item name="android:windowDrawsSystemBarBackgrounds" tools:targetApi="lollipop">true</item>
+        <item name="android:statusBarColor" tools:targetApi="lollipop">@color/primary_dark_material_light</item>
         <!--<item name="android:statusBarColor">@android:color/transparent</item>-->
     </style>
 
